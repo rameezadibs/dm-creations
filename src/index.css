@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Local font definitions */
+@font-face {
+  font-family: 'Bodoni Moda';
+  src: url('/fonts/bodoni-moda.ttf') format('truetype');
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bodoni Moda';
+  src: url('/fonts/bodoni-moda-italic.ttf') format('truetype');
+  font-weight: 400 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('/fonts/manrope.ttf') format('truetype');
+  font-weight: 300 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #F6F4EF;
+    color: #151515;
+    font-family: 'Plus Jakarta Sans', Manrope, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  /* Hide default cursor on desktop/fine pointers so only the custom designed cursor is visible */
+  @media (hover: hover) and (pointer: fine) {
+    *, *::before, *::after {
+      cursor: none !important;
+    }
+  }
+}
+
+/* Custom camera viewfinder corners */
+.corner-frame {
+  position: relative;
+}
+
+.corner-frame::before,
+.corner-frame::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.corner-frame::before {
+  top: -1px;
+  left: -1px;
+  border-top: 1.5px solid currentColor;
+  border-left: 1.5px solid currentColor;
+}
+
+.corner-frame::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 1.5px solid currentColor;
+  border-right: 1.5px solid currentColor;
+}
+
+/* Four-corner camera viewfinder */
+.viewfinder-box {
+  position: relative;
+}
+
+.viewfinder-box .corner-tl {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 16px;
+  height: 16px;
+  border-top: 1.5px solid currentColor;
+  border-left: 1.5px solid currentColor;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.viewfinder-box .corner-tr {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 16px;
+  height: 16px;
+  border-top: 1.5px solid currentColor;
+  border-right: 1.5px solid currentColor;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.viewfinder-box .corner-bl {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  width: 16px;
+  height: 16px;
+  border-bottom: 1.5px solid currentColor;
+  border-left: 1.5px solid currentColor;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.viewfinder-box .corner-br {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 16px;
+  height: 16px;
+  border-bottom: 1.5px solid currentColor;
+  border-right: 1.5px solid currentColor;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+/* Film Negative Perforations Motif */
+.film-perforations {
+  background-image: radial-gradient(#151515 35%, transparent 36%);
+  background-size: 16px 16px;
+  background-repeat: repeat-x;
+}
+
+/* Marquee track animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Hide scrollbars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Subtle image zoom on hover */
+.img-hover-scale {
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.group:hover .img-hover-scale {
+  transform: scale(1.035);
+}
+
+/* Pulse animation for live recording indicator */
+@keyframes recording-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(0.9); }
+}
+
+.animate-rec-pulse {
+  animation: recording-pulse 1.8s ease-in-out infinite;
+}
