@@ -44,7 +44,7 @@ export default function Showreel({ onOpenVideo }) {
           >
             {/* Master Thumbnail */}
             <img
-              src="/images/showreel-thumb.jpg"
+              src="https://img.youtube.com/vi/OwHiea7wtR0/maxresdefault.jpg"
               alt="DM Creation Cinematic Showreel preview"
               className="w-full h-full object-cover img-hover-scale opacity-80 group-hover:opacity-100 transition-opacity duration-700"
               loading="lazy"

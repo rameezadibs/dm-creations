@@ -18,7 +18,7 @@ export default function Footer({ onOpenBooking }) {
               <img
                 src="/dm-logo-white.png"
                 alt="DM Creation Studio"
-                className="h-12 w-auto object-contain"
+                className="h-20 sm:h-24 w-auto object-contain"
               />
             </div>
             <p className="text-sm text-white/60 font-light leading-relaxed max-w-sm mb-6">

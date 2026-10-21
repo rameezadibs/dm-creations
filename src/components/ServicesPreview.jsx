@@ -149,7 +149,7 @@ export default function ServicesPreview({ onOpenBooking, onOpenVideo }) {
               aria-label="Play DM Creation Cinematic Videography Film"
             >
               <img
-                src="/images/service-video.jpg"
+                src="https://img.youtube.com/vi/4J1SNIb0Qyo/maxresdefault.jpg"
                 alt="DM Creation Cinematic Videography and Motion Picture Production Dubai"
                 title="DM Creation Cinematic Film Production"
                 className="w-full h-full object-cover img-hover-scale opacity-90 group-hover:opacity-100"
