@@ -7,79 +7,607 @@ export default function SelectedWork({ onOpenBooking, onOpenProjectModal }) {
   const { setCursor, resetCursor } = useCursor();
   const [filter, setFilter] = useState('ALL');
 
-  const categories = ['ALL', 'PHOTOGRAPHY', 'FILM', 'LIVE STREAM', '360° BOOTH'];
+  const categories = ['ALL', 'RAK TOURISM PROJECT', 'WEDDINGS', 'BABY PHOTOSHOOT', 'CORPORATE MEETING', 'Real Estate Photography | Pagani | 2022', 'MODEL SHOOT'];
 
   const projects = [
     {
       id: 1,
-      title: 'THE ROYAL PALM GALA',
-      category: 'PHOTOGRAPHY',
-      type: 'EVENT PHOTOGRAPHY',
-      location: 'DUBAI, UAE',
-      image: '/images/work-1.jpg',
+      title: 'RAK TOURISM CAMPAIGN — SCENE 01',
+      category: 'RAK TOURISM PROJECT',
+      type: 'TOURISM EDITORIAL',
+      location: 'RAS AL KHAIMAH, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_112501',
       format: 'LANDSCAPE',
       aspect: 'aspect-[16/10]',
-      colSpan: 'lg:col-span-8',
+      colSpan: 'lg:col-span-6',
       year: '2026',
     },
     {
       id: 2,
-      title: 'NOMAD: COUTURE STILLS',
-      category: 'PHOTOGRAPHY',
-      type: 'EDITORIAL PORTRAIT',
-      location: 'AL QUDRA DESERT',
-      image: '/images/work-2.jpg',
-      format: 'PORTRAIT',
-      aspect: 'aspect-[3/4]',
-      colSpan: 'lg:col-span-4',
+      title: 'RAK TOURISM CAMPAIGN — SCENE 02',
+      category: 'RAK TOURISM PROJECT',
+      type: 'CINEMATIC STILLS',
+      location: 'RAS AL KHAIMAH, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_113255',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
       year: '2026',
     },
     {
       id: 3,
-      title: 'TWILIGHT HARBOR VOWS',
-      category: 'PHOTOGRAPHY',
-      type: 'DESTINATION EVENT',
-      location: 'BULGARI RESORT',
-      image: '/images/work-3.jpg',
-      format: 'PORTRAIT',
-      aspect: 'aspect-[4/5]',
-      colSpan: 'lg:col-span-5',
+      title: 'RAK TOURISM CAMPAIGN — SCENE 03',
+      category: 'RAK TOURISM PROJECT',
+      type: 'DESTINATION FEATURE',
+      location: 'RAS AL KHAIMAH, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_113313',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
       year: '2026',
     },
     {
       id: 4,
-      title: 'APEX GLOBAL SUMMIT',
-      category: 'LIVE STREAM',
-      type: 'MULTI-CAM BROADCAST',
-      location: 'DUBAI OPERA',
-      image: '/images/work-4.jpg',
+      title: 'RAK TOURISM CAMPAIGN — SCENE 04',
+      category: 'RAK TOURISM PROJECT',
+      type: 'NARRATIVE VISUAL',
+      location: 'RAS AL KHAIMAH, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_113330',
       format: 'LANDSCAPE',
       aspect: 'aspect-[16/10]',
-      colSpan: 'lg:col-span-7',
+      colSpan: 'lg:col-span-6',
       year: '2026',
     },
     {
       id: 5,
-      title: 'NOCTURNE SOUND FESTIVAL',
-      category: 'FILM',
-      type: 'CINEMATIC SHOWREEL',
-      location: 'ABU DHABI',
-      image: '/images/work-5.jpg',
+      title: 'RAK TOURISM CAMPAIGN — SCENE 05',
+      category: 'RAK TOURISM PROJECT',
+      type: 'CAMPAIGN PRODUCTION',
+      location: 'RAS AL KHAIMAH, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_113402',
       format: 'FULL_WIDTH',
-      aspect: 'aspect-[21/9]',
+      aspect: 'aspect-[16/9]',
       colSpan: 'lg:col-span-12',
       year: '2026',
     },
     {
       id: 6,
-      title: 'METAVERSE 360 IMMERSION',
-      category: '360° BOOTH',
-      type: 'INTERACTIVE BOOTH',
-      location: 'DIFC',
-      image: '/images/work-6.jpg',
+      title: 'WEDDING ARCHIVE 01',
+      category: 'WEDDINGS',
+      type: 'LUXURY WEDDING',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_113455',
       format: 'LANDSCAPE',
-      aspect: 'aspect-[16/9]',
-      colSpan: 'lg:col-span-12',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 7,
+      title: 'WEDDING ARCHIVE 02',
+      category: 'WEDDINGS',
+      type: 'LUXURY WEDDING',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_113525',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 8,
+      title: 'WEDDING ARCHIVE 03',
+      category: 'WEDDINGS',
+      type: 'LUXURY WEDDING',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_113543',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 9,
+      title: 'WEDDING ARCHIVE 04',
+      category: 'WEDDINGS',
+      type: 'LUXURY WEDDING',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_113556',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 10,
+      title: 'WEDDING ARCHIVE 05',
+      category: 'WEDDINGS',
+      type: 'LUXURY WEDDING',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_113609',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 11,
+      title: 'WEDDING ARCHIVE 06',
+      category: 'WEDDINGS',
+      type: 'LUXURY WEDDING',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_160948',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 12,
+      title: 'WEDDING ARCHIVE 07',
+      category: 'WEDDINGS',
+      type: 'LUXURY WEDDING',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_161344',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 13,
+      title: 'WEDDING ARCHIVE 08',
+      category: 'WEDDINGS',
+      type: 'LUXURY WEDDING',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_161400',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 14,
+      title: 'WEDDING ARCHIVE 09',
+      category: 'WEDDINGS',
+      type: 'LUXURY WEDDING',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_161838',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 15,
+      title: 'WEDDING ARCHIVE 10',
+      category: 'WEDDINGS',
+      type: 'LUXURY WEDDING',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_161910',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 16,
+      title: 'WEDDING ARCHIVE 11',
+      category: 'WEDDINGS',
+      type: 'LUXURY WEDDING',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_161853',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 17,
+      title: 'WEDDING ARCHIVE 12',
+      category: 'WEDDINGS',
+      type: 'LUXURY WEDDING',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_162110',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 18,
+      title: 'WEDDING ARCHIVE 13',
+      category: 'WEDDINGS',
+      type: 'LUXURY WEDDING',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_162124',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 19,
+      title: 'WEDDING ARCHIVE 14',
+      category: 'WEDDINGS',
+      type: 'LUXURY WEDDING',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_162145',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 20,
+      title: 'WEDDING ARCHIVE 15',
+      category: 'WEDDINGS',
+      type: 'LUXURY WEDDING',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_162903',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 21,
+      title: 'WEDDING ARCHIVE 16',
+      category: 'WEDDINGS',
+      type: 'LUXURY WEDDING',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_162920',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 22,
+      title: 'BABY PHOTOSHOOT 01',
+      category: 'BABY PHOTOSHOOT',
+      type: 'BABY PORTRAIT',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_153021',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 23,
+      title: 'BABY PHOTOSHOOT 02',
+      category: 'BABY PHOTOSHOOT',
+      type: 'BABY PORTRAIT',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_153112',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 24,
+      title: 'BABY PHOTOSHOOT 03',
+      category: 'BABY PHOTOSHOOT',
+      type: 'BABY PORTRAIT',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_153130',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 25,
+      title: 'BABY PHOTOSHOOT 04',
+      category: 'BABY PHOTOSHOOT',
+      type: 'BABY PORTRAIT',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_160608',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 26,
+      title: 'BABY PHOTOSHOOT 05',
+      category: 'BABY PHOTOSHOOT',
+      type: 'BABY PORTRAIT',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_160626',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 27,
+      title: 'BABY PHOTOSHOOT 06',
+      category: 'BABY PHOTOSHOOT',
+      type: 'BABY PORTRAIT',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_160648',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 28,
+      title: 'CORPORATE MEETING 01',
+      category: 'CORPORATE MEETING',
+      type: 'CORPORATE EVENT',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_152040',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 29,
+      title: 'CORPORATE MEETING 02',
+      category: 'CORPORATE MEETING',
+      type: 'CORPORATE EVENT',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_152724',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 30,
+      title: 'CORPORATE MEETING 03',
+      category: 'CORPORATE MEETING',
+      type: 'CORPORATE EVENT',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_141101',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 31,
+      title: 'CORPORATE MEETING 04',
+      category: 'CORPORATE MEETING',
+      type: 'CORPORATE EVENT',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_152742',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 32,
+      title: 'CORPORATE MEETING 05',
+      category: 'CORPORATE MEETING',
+      type: 'CORPORATE EVENT',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_152825',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 33,
+      title: 'CORPORATE MEETING 06',
+      category: 'CORPORATE MEETING',
+      type: 'CORPORATE EVENT',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_152757',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 34,
+      title: 'CORPORATE MEETING 07',
+      category: 'CORPORATE MEETING',
+      type: 'CORPORATE EVENT',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_152809',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 35,
+      title: 'PAGANI REAL ESTATE 01',
+      category: 'Real Estate Photography | Pagani | 2022',
+      type: 'REAL ESTATE PHOTOGRAPHY',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_124935',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2022',
+    },
+    {
+      id: 36,
+      title: 'PAGANI REAL ESTATE 02',
+      category: 'Real Estate Photography | Pagani | 2022',
+      type: 'REAL ESTATE PHOTOGRAPHY',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_124955',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2022',
+    },
+    {
+      id: 37,
+      title: 'PAGANI REAL ESTATE 03',
+      category: 'Real Estate Photography | Pagani | 2022',
+      type: 'REAL ESTATE PHOTOGRAPHY',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_124920',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2022',
+    },
+    {
+      id: 38,
+      title: 'PAGANI REAL ESTATE 04',
+      category: 'Real Estate Photography | Pagani | 2022',
+      type: 'REAL ESTATE PHOTOGRAPHY',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_130652',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2022',
+    },
+    {
+      id: 39,
+      title: 'MODEL SHOOT 01',
+      category: 'MODEL SHOOT',
+      type: 'EDITORIAL FASHION',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_114554',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 40,
+      title: 'MODEL SHOOT 02',
+      category: 'MODEL SHOOT',
+      type: 'EDITORIAL FASHION',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_114609',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 41,
+      title: 'MODEL SHOOT 03',
+      category: 'MODEL SHOOT',
+      type: 'EDITORIAL FASHION',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_114622',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 42,
+      title: 'MODEL SHOOT 04',
+      category: 'MODEL SHOOT',
+      type: 'EDITORIAL FASHION',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_114700',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 43,
+      title: 'MODEL SHOOT 05',
+      category: 'MODEL SHOOT',
+      type: 'EDITORIAL FASHION',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_114743',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 44,
+      title: 'MODEL SHOOT 06',
+      category: 'MODEL SHOOT',
+      type: 'EDITORIAL FASHION',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_122833',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 45,
+      title: 'MODEL SHOOT 07',
+      category: 'MODEL SHOOT',
+      type: 'EDITORIAL FASHION',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_115020',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 46,
+      title: 'MODEL SHOOT 08',
+      category: 'MODEL SHOOT',
+      type: 'EDITORIAL FASHION',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_122814',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 47,
+      title: 'MODEL SHOOT 09',
+      category: 'MODEL SHOOT',
+      type: 'EDITORIAL FASHION',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_122905',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 48,
+      title: 'MODEL SHOOT 10',
+      category: 'MODEL SHOOT',
+      type: 'EDITORIAL FASHION',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_122918',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 49,
+      title: 'MODEL SHOOT 11',
+      category: 'MODEL SHOOT',
+      type: 'EDITORIAL FASHION',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_122851',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
+      year: '2026',
+    },
+    {
+      id: 50,
+      title: 'MODEL SHOOT 12',
+      category: 'MODEL SHOOT',
+      type: 'EDITORIAL FASHION',
+      location: 'DUBAI, UAE',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-11_122940',
+      format: 'LANDSCAPE',
+      aspect: 'aspect-[16/10]',
+      colSpan: 'lg:col-span-6',
       year: '2026',
     },
   ];
@@ -99,7 +627,7 @@ export default function SelectedWork({ onOpenBooking, onOpenProjectModal }) {
               <span>•</span>
               <span>SELECTED WORK</span>
             </div>
-            <h2 className="text-4xl sm:text-6xl font-bold uppercase tracking-tight text-[#151515]">
+            <h2 className="font-serif text-4xl sm:text-6xl font-normal uppercase tracking-tight text-[#151515] leading-[1.08]">
               A FEW MOMENTS
               <br />
               <span className="font-serif italic font-normal text-[#B69A6A] lowercase">
@@ -122,19 +650,18 @@ export default function SelectedWork({ onOpenBooking, onOpenProjectModal }) {
             <button
               key={cat}
               onClick={() => setFilter(cat)}
-              className={`px-4 py-2 text-xs font-mono uppercase tracking-wider border transition-all duration-300 ${
-                filter === cat
+              className={`px-4 py-2 text-xs font-mono uppercase tracking-wider border transition-all duration-300 ${filter === cat
                   ? 'bg-[#151515] text-[#F6F4EF] border-[#151515]'
                   : 'bg-white text-[#666666] border-[#DEDCD6] hover:border-[#151515] hover:text-[#151515]'
-              }`}
+                }`}
             >
               {cat}
             </button>
           ))}
         </div>
 
-        {/* Irregular Editorial Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+        {/* Editorial Grid - 3 columns on desktop, 2 on tablet, 1 on mobile */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-6 items-start">
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((project, index) => (
               <motion.div
@@ -144,67 +671,26 @@ export default function SelectedWork({ onOpenBooking, onOpenProjectModal }) {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                className={`${project.colSpan} group relative`}
+                className="w-full relative"
               >
                 <div
-                  className="relative bg-white p-3 sm:p-4 border border-[#DEDCD6] shadow-editorial cursor-pointer overflow-hidden"
-                  onMouseEnter={() => setCursor('view', 'VIEW ↗')}
-                  onMouseLeave={resetCursor}
+                  className="relative bg-white p-2.5 sm:p-3 border border-[#DEDCD6] shadow-editorial cursor-pointer overflow-hidden transition-transform duration-300 hover:-translate-y-1"
                   onClick={() => onOpenProjectModal?.(project)}
                 >
                   {/* Subtle Viewfinder Frame Markers */}
-                  <div className="absolute top-2 left-2 w-3 h-3 border-t border-l border-[#151515]/30 pointer-events-none z-20" />
-                  <div className="absolute top-2 right-2 w-3 h-3 border-t border-r border-[#151515]/30 pointer-events-none z-20" />
-                  <div className="absolute bottom-2 left-2 w-3 h-3 border-b border-l border-[#151515]/30 pointer-events-none z-20" />
-                  <div className="absolute bottom-2 right-2 w-3 h-3 border-b border-r border-[#151515]/30 pointer-events-none z-20" />
+                  <div className="absolute top-2 left-2 w-2.5 h-2.5 border-t border-l border-[#151515]/30 pointer-events-none z-20" />
+                  <div className="absolute top-2 right-2 w-2.5 h-2.5 border-t border-r border-[#151515]/30 pointer-events-none z-20" />
+                  <div className="absolute bottom-2 left-2 w-2.5 h-2.5 border-b border-l border-[#151515]/30 pointer-events-none z-20" />
+                  <div className="absolute bottom-2 right-2 w-2.5 h-2.5 border-b border-r border-[#151515]/30 pointer-events-none z-20" />
 
-                  {/* Image Container with Hover Scale */}
-                  <div className={`relative ${project.aspect} overflow-hidden bg-[#151515]`}>
+                  {/* Clean Image Container */}
+                  <div className="relative w-full overflow-hidden bg-transparent">
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover img-hover-scale"
+                      className="w-full h-auto block"
                       loading="lazy"
                     />
-
-                    {/* Dark Editorial Overlay that reveals on hover */}
-                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-between p-6 sm:p-8 text-white z-10 backdrop-blur-[2px]">
-                      {/* Top Bar */}
-                      <div className="flex items-center justify-between font-mono text-[11px] tracking-widest text-[#B69A6A]">
-                        <span>[EXP {index + 1} / 06]</span>
-                        <span>{project.location}</span>
-                      </div>
-
-                      {/* Center / Bottom Info */}
-                      <div>
-                        <span className="text-xs font-mono uppercase tracking-widest text-white/70 block mb-1">
-                          {project.type}
-                        </span>
-                        <h4 className="text-2xl sm:text-4xl font-bold uppercase tracking-tight text-[#F6F4EF] mb-4">
-                          {project.title}
-                        </h4>
-                        <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#B69A6A] font-semibold border-b border-[#B69A6A] pb-1">
-                          <span>VIEW PROJECT</span>
-                          <ArrowUpRight className="w-4 h-4" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Static Editorial Caption Below Image */}
-                  <div className="mt-3 sm:mt-4 flex items-center justify-between text-xs font-mono">
-                    <div className="flex items-center gap-2">
-                      <span className="font-bold text-[#151515] uppercase tracking-wider">
-                        {project.title}
-                      </span>
-                      <span className="text-[#9E9C96]">•</span>
-                      <span className="text-[#666666] text-[11px] uppercase">
-                        {project.type}
-                      </span>
-                    </div>
-                    <span className="text-[#9E9C96] text-[11px]">
-                      {project.year}
-                    </span>
                   </div>
                 </div>
               </motion.div>

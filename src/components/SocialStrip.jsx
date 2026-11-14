@@ -79,7 +79,7 @@ export default function SocialStrip() {
                 COMING SOON
               </span>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-bold uppercase tracking-tight text-[#F6F4EF]">
+            <h2 className="font-serif text-3xl sm:text-5xl font-normal uppercase tracking-tight text-[#F6F4EF]">
               OFF CAMERA.{' '}
               <span className="font-serif italic font-normal text-[#B69A6A]">on your feed.</span>
             </h2>

@@ -47,17 +47,17 @@ export default function ProjectModal({ project, onClose, onOpenBooking }) {
               <span>•</span>
               <span>{project.type}</span>
             </div>
-            <h3 className="text-3xl sm:text-5xl font-bold uppercase tracking-tight text-[#151515]">
+            <h3 className="font-serif text-3xl sm:text-5xl font-normal uppercase tracking-tight text-[#151515] leading-tight">
               {project.title}
             </h3>
           </div>
 
-          {/* Image Feature */}
-          <div className="relative aspect-[16/10] overflow-hidden bg-black mb-6 border border-[#DEDCD6]">
+          {/* Image Feature - Natural aspect ratio */}
+          <div className="relative w-full overflow-hidden mb-6 border border-[#DEDCD6] bg-[#111111]">
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-full object-cover"
+              className="w-full h-auto max-h-[65vh] object-contain mx-auto block"
             />
           </div>
 

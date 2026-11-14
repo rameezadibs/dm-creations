@@ -55,6 +55,7 @@ export default function Navbar({ onOpenBooking }) {
   ];
 
   const isDarkTheme = isDarkSection;
+  const isHome = location.pathname === '/';
 
   return (
     <>
@@ -63,7 +64,7 @@ export default function Navbar({ onOpenBooking }) {
           isScrolled
             ? isDarkTheme
               ? 'py-3.5 bg-[#111111]/90 backdrop-blur-md border-b border-white/10'
-              : 'py-3.5 bg-[#F6F4EF]/90 backdrop-blur-md border-b border-[#DEDCD6]/80 shadow-subtle'
+              : `py-3.5 ${isHome ? 'bg-[#F3EFEA]/90' : 'bg-[#F6F4EF]/90'} backdrop-blur-md border-b border-[#DEDCD6]/80 shadow-subtle`
             : 'py-6 bg-transparent'
         }`}
       >

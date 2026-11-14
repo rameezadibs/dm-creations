@@ -5,7 +5,7 @@ export default function FinalCTA({ onOpenBooking }) {
   return (
     <section
       aria-label="Book DM Creation - Photography, Videography & Visual Production Dubai"
-      className="pt-10 sm:pt-14 pb-20 sm:pb-28 bg-[#F6F4EF] border-b border-[#DEDCD6]/60 relative"
+      className="pt-10 sm:pt-14 pb-20 sm:pb-28 bg-[#F3EFEA] border-b border-[#DEDCD6]/60 relative"
       itemScope
       itemType="https://schema.org/ContactPoint"
     >
@@ -55,7 +55,7 @@ export default function FinalCTA({ onOpenBooking }) {
               <span>COLLABORATE WITH US // DUBAI • UAE</span>
             </div>
 
-            <h2 className="text-4xl sm:text-6xl xl:text-7xl font-bold uppercase tracking-tight text-[#151515] leading-[0.98] mb-6">
+            <h2 className="font-serif text-4xl sm:text-6xl xl:text-7xl font-normal uppercase tracking-tight text-[#151515] leading-[1.04] mb-6">
               GOT A MOMENT
               <br />
               <span className="font-serif italic font-normal text-[#B69A6A] lowercase">

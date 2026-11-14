@@ -22,7 +22,7 @@ export default function Showreel({ onOpenVideo }) {
             <span>DM CREATION // CINEMATIC SHOWREEL</span>
           </div>
 
-          <h2 className="text-4xl sm:text-6xl lg:text-7xl font-bold uppercase tracking-tight text-[#F6F4EF] max-w-4xl leading-[1.05]">
+          <h2 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-normal uppercase tracking-tight text-[#F6F4EF] max-w-4xl leading-[1.08]">
             SOME MOMENTS
             <br />
             NEED MORE

@@ -23,8 +23,9 @@ export default {
       },
       fontFamily: {
         sans: ['"Plus Jakarta Sans"', 'Manrope', 'sans-serif'],
-        serif: ['"Bodoni Moda"', '"Playfair Display"', 'Georgia', 'serif'],
-        editorial: ['"Bodoni Moda"', '"Playfair Display"', 'Georgia', 'serif'],
+        serif: ['"Playfair Display"', '"Bodoni Moda"', 'Georgia', 'serif'],
+        editorial: ['"Playfair Display"', 'Georgia', 'serif'],
+        heading: ['"Playfair Display"', 'Georgia', 'serif'],
         mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
       },
       letterSpacing: {

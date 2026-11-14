@@ -35,7 +35,7 @@ export default function Hero({ onOpenBooking, onScrollToWork }) {
   return (
     <section
       aria-label="DM Creation Visual Production Studio Dubai"
-      className="relative pt-28 sm:pt-36 pb-10 sm:pb-14 px-4 sm:px-6 lg:px-8 bg-[#F6F4EF] overflow-hidden border-b border-[#DEDCD6]/60"
+      className="relative pt-28 sm:pt-36 pb-10 sm:pb-14 px-4 sm:px-6 lg:px-8 bg-[#F3EFEA] overflow-hidden border-b border-[#DEDCD6]/60"
     >
       {/* Background Subtle Viewfinder Grid Watermarks */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.035] flex items-center justify-center select-none" aria-hidden="true">
@@ -83,7 +83,7 @@ export default function Hero({ onOpenBooking, onScrollToWork }) {
             {/* Primary SEO H1 Headline */}
             <motion.h1
               variants={itemVariants}
-              className="text-5xl sm:text-7xl xl:text-[5.5rem] font-extrabold uppercase tracking-tight text-[#151515] leading-[0.92] mb-6 sm:mb-8"
+              className="font-serif text-5xl sm:text-7xl xl:text-[5.5rem] font-normal uppercase tracking-tight text-[#151515] leading-[0.96] mb-6 sm:mb-8"
             >
               WE CAPTURE
               <br />
@@ -158,7 +158,7 @@ export default function Hero({ onOpenBooking, onScrollToWork }) {
               >
                 <div className="relative aspect-[3/4] overflow-hidden group bg-[#151515]">
                   <img
-                    src="/home/hero.PNG"
+                    src="https://res.cloudinary.com/aubynz6r/image/upload/hero"
                     alt="DM Creation - Luxury Wedding and Editorial Photography Dubai"
                     title="DM Creation Editorial Event Photography"
                     className="w-full h-full object-cover img-hover-scale"

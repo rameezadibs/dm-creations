@@ -27,7 +27,7 @@ export default function VisualStatement() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Large Statement Typography (7 cols) */}
           <div className="lg:col-span-7">
-            <h2 className="text-4xl sm:text-6xl xl:text-7xl font-bold uppercase tracking-tight text-[#F6F4EF] leading-[1.02] mb-8">
+            <h2 className="font-serif text-4xl sm:text-6xl xl:text-7xl font-normal uppercase tracking-tight text-[#F6F4EF] leading-[1.05] mb-8">
               YOU LIVE
               <br />
               THE MOMENT.

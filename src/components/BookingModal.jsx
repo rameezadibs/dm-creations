@@ -77,7 +77,7 @@ export default function BookingModal({ isOpen, onClose, defaultService = 'Photog
                     <span>•</span>
                     <span>DM CREATION</span>
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-bold tracking-tight uppercase">
+                  <h3 className="font-serif text-2xl sm:text-3xl font-normal tracking-tight uppercase">
                     Book A <span className="font-serif italic font-normal text-[#B69A6A]">Shoot</span>
                   </h3>
                   <p className="text-sm text-[#666666] mt-1 font-light">

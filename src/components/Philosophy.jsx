@@ -13,7 +13,7 @@ export default function Philosophy() {
             <span>OUR APPROACH // THE METHOD</span>
           </div>
 
-          <h2 className="text-4xl sm:text-6xl font-bold uppercase tracking-tight text-[#151515] leading-[1.02] mb-6">
+          <h2 className="font-serif text-4xl sm:text-6xl font-normal uppercase tracking-tight text-[#151515] leading-[1.06] mb-6">
             NO STIFF POSES.
             <br />
             NO BORING FRAMES.

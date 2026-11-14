@@ -10,7 +10,7 @@ export default function ServicesPreview({ onOpenBooking, onOpenVideo }) {
     <section
       id="services-section"
       aria-label="DM Creation Production Services - Photography, Videography, Live Streaming & 360 Booth"
-      className="pt-6 sm:pt-8 pb-4 sm:pb-6 bg-[#F6F4EF] border-b border-[#DEDCD6]/60"
+      className="pt-6 sm:pt-8 pb-4 sm:pb-6 bg-[#F3EFEA] border-b border-[#DEDCD6]/60"
       itemScope
       itemType="https://schema.org/ItemList"
     >
@@ -24,7 +24,7 @@ export default function ServicesPreview({ onOpenBooking, onOpenVideo }) {
                 WHAT WE DO // SERVICES & DISCIPLINES
               </span>
             </div>
-            <h2 className="text-4xl sm:text-6xl font-bold uppercase tracking-tight text-[#151515]">
+            <h2 className="font-serif text-4xl sm:text-6xl font-normal uppercase tracking-tight text-[#151515] leading-[1.08]">
               FOUR WAYS
               <br />
               <span className="font-serif italic font-normal text-[#B69A6A] lowercase">
@@ -52,7 +52,7 @@ export default function ServicesPreview({ onOpenBooking, onOpenVideo }) {
               <div className="relative bg-white p-3 sm:p-4 border border-[#DEDCD6] shadow-editorial group">
                 <div className="relative aspect-[4/3] sm:aspect-[16/11] overflow-hidden bg-[#151515]">
                   <img
-                    src="/home/1.png"
+                    src="https://res.cloudinary.com/aubynz6r/image/upload/1"
                     alt="DM Creation - Luxury Wedding & Editorial Event Photography in Dubai"
                     title="DM Creation Professional Photography Services"
                     className="w-full h-full object-cover img-hover-scale"
@@ -82,7 +82,7 @@ export default function ServicesPreview({ onOpenBooking, onOpenVideo }) {
                 <span>/</span>
                 <span itemProp="name">PHOTOGRAPHY</span>
               </div>
-              <h3 className="text-3xl sm:text-4xl font-bold uppercase tracking-tight text-[#151515] leading-tight mb-4">
+              <h3 className="font-serif text-3xl sm:text-4xl font-normal uppercase tracking-tight text-[#151515] leading-tight mb-4">
                 REAL MOMENTS.
                 <br />
                 <span className="font-serif italic font-normal text-[#B69A6A]">BEAUTIFULLY</span> FRAMED.
@@ -129,7 +129,7 @@ export default function ServicesPreview({ onOpenBooking, onOpenVideo }) {
                   <Video className="w-3.5 h-3.5" aria-hidden="true" />
                   <span itemProp="name">02 / VIDEOGRAPHY</span>
                 </div>
-                <h3 className="text-3xl sm:text-5xl font-bold uppercase tracking-tight text-[#F6F4EF]">
+                <h3 className="font-serif text-3xl sm:text-5xl font-normal uppercase tracking-tight text-[#F6F4EF] leading-tight">
                   STORIES DESERVE{' '}
                   <span className="font-serif italic font-normal text-[#B69A6A]">movement.</span>
                 </h3>
@@ -210,7 +210,7 @@ export default function ServicesPreview({ onOpenBooking, onOpenVideo }) {
                 <Radio className="w-3.5 h-3.5 animate-pulse text-red-500" aria-hidden="true" />
                 <span itemProp="name">03 / LIVE STREAMING</span>
               </div>
-              <h3 className="text-3xl sm:text-4xl font-bold uppercase tracking-tight text-[#151515] leading-tight mb-4">
+              <h3 className="font-serif text-3xl sm:text-4xl font-normal uppercase tracking-tight text-[#151515] leading-tight mb-4">
                 YOUR MOMENT.
                 <br />
                 EVERYWHERE.{' '}
@@ -359,7 +359,7 @@ export default function ServicesPreview({ onOpenBooking, onOpenVideo }) {
                 <RotateCw className="w-3.5 h-3.5 text-[#B69A6A]" aria-hidden="true" />
                 <span itemProp="name">04 / 360° BOOTH</span>
               </div>
-              <h3 className="text-3xl sm:text-4xl font-bold uppercase tracking-tight text-[#151515] leading-tight mb-4">
+              <h3 className="font-serif text-3xl sm:text-4xl font-normal uppercase tracking-tight text-[#151515] leading-tight mb-4">
                 STEP IN. SPIN.{' '}
                 <span className="font-serif italic font-normal text-[#B69A6A]">stand out.</span>
               </h3>

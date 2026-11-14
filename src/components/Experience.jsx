@@ -54,7 +54,7 @@ export default function Experience({ onOpenBooking }) {
             <span>WHY DM CREATION</span>
           </div>
 
-          <h2 className="text-4xl sm:text-6xl font-bold uppercase tracking-tight text-[#F6F4EF] leading-[1.04]">
+          <h2 className="font-serif text-4xl sm:text-6xl font-normal uppercase tracking-tight text-[#F6F4EF] leading-[1.06]">
             THE CAMERA IS OUR TOOL.
             <br />
             <span className="font-serif italic font-normal text-[#B69A6A] lowercase">
@@ -85,7 +85,7 @@ export default function Experience({ onOpenBooking }) {
 
                 {/* Title & Tagline (4 cols) */}
                 <div className="md:col-span-4">
-                  <h3 className="text-2xl sm:text-3xl font-bold uppercase tracking-tight text-[#F6F4EF] mb-1">
+                  <h3 className="font-serif text-2xl sm:text-3xl font-normal uppercase tracking-tight text-[#F6F4EF] mb-1">
                     {pillar.title}
                   </h3>
                   <span className="text-sm font-serif italic text-[#B69A6A] block">

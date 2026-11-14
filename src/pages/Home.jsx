@@ -35,7 +35,7 @@ export default function Home() {
   };
 
   return (
-    <main className="relative">
+    <main className="relative bg-[#F3EFEA]">
       {/* 01 — Hero Section */}
       <Hero
         onOpenBooking={() => handleOpenBooking('General Inquiry')}

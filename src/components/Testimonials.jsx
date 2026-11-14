@@ -40,7 +40,7 @@ export default function Testimonials() {
   const active = testimonials[currentIdx];
 
   return (
-    <section className="pt-12 sm:pt-16 pb-10 sm:pb-14 bg-[#F6F4EF] border-b border-[#DEDCD6]/60 relative overflow-hidden">
+    <section className="pt-12 sm:pt-16 pb-10 sm:pb-14 bg-[#F3EFEA] border-b border-[#DEDCD6]/60 relative overflow-hidden">
       {/* Huge Subtle Watermark Quotation Mark in Background */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none opacity-5">
         <span className="font-serif text-[28vw] leading-none text-[#151515]">
