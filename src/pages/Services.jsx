@@ -303,7 +303,7 @@ export default function Services({ onOpenBooking }) {
         'Multi-lingual simultaneous audio',
       ],
       applications: ['International Trade Summits', 'Hybrid Corporate Conferences', 'Global Product Unveilings', 'Live Concert & Gala Feeds'],
-      image: 'https://res.cloudinary.com/aubynz6r/image/upload/360',
+      image: 'https://res.cloudinary.com/aubynz6r/image/upload/BTS',
       imageAlt: 'Live multi-camera broadcast control console and stage production at a major Dubai international summit',
     },
     {

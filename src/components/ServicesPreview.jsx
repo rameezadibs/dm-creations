@@ -271,7 +271,7 @@ export default function ServicesPreview({ onOpenBooking, onOpenVideo }) {
 
                 <div className="relative aspect-[16/10] overflow-hidden bg-black group">
                   <img
-                    src="/images/service-live.jpg"
+                    src="https://res.cloudinary.com/aubynz6r/image/upload/Behind_the_Scenes__Keynote_Production"
                     alt="DM Creation Live Streaming Multi-Camera Broadcast Production Dubai"
                     title="DM Creation Live Streaming Production"
                     className="w-full h-full object-cover img-hover-scale opacity-90"
@@ -334,7 +334,7 @@ export default function ServicesPreview({ onOpenBooking, onOpenVideo }) {
 
                 <div className="relative aspect-[4/3] sm:aspect-[16/10] overflow-hidden bg-[#111111]">
                   <img
-                    src="/images/service-360.jpg"
+                    src="https://res.cloudinary.com/aubynz6r/image/upload/Glamorous_360_Video_Booth_Experience"
                     alt="DM Creation 360 degree video booth rental for corporate events and weddings in Dubai"
                     title="DM Creation 360 Video Booth Experience"
                     className="w-full h-full object-cover img-hover-scale"

@@ -158,7 +158,7 @@ export default function Hero({ onOpenBooking, onScrollToWork }) {
               >
                 <div className="relative aspect-[3/4] overflow-hidden group bg-[#151515]">
                   <img
-                    src="https://res.cloudinary.com/aubynz6r/image/upload/hero"
+                    src="https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-15_154555"
                     alt="DM Creation - Luxury Wedding and Editorial Photography Dubai"
                     title="DM Creation Editorial Event Photography"
                     className="w-full h-full object-cover img-hover-scale"
@@ -188,7 +188,7 @@ export default function Hero({ onOpenBooking, onScrollToWork }) {
               >
                 <div className="relative aspect-[16/10] overflow-hidden group">
                   <img
-                    src="/images/hero-cinematic.jpg"
+                    src="https://res.cloudinary.com/aubynz6r/image/upload/Screenshot_2026-11-15_154710"
                     alt="Cinematic videography and motion film production in Dubai by DM Creation"
                     title="DM Creation Cinematic Videography"
                     className="w-full h-full object-cover img-hover-scale brightness-95"

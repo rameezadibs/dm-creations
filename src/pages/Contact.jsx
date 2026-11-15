@@ -40,7 +40,7 @@ export default function Contact({ onOpenBooking }) {
                 <MapPin className="w-5 h-5 text-[#B69A6A] flex-shrink-0 mt-0.5" />
                 <div className="text-xs font-mono">
                   <span className="text-[#9E9C96] block uppercase mb-0.5">LOCATION</span>
-                  <span className="font-semibold text-[#151515]">Dubai Design District / Worldwide</span>
+                  <span className="font-semibold text-[#151515]">Business Bay, Dubai / Worldwide</span>
                 </div>
               </div>
 
@@ -49,10 +49,10 @@ export default function Contact({ onOpenBooking }) {
                 <div className="text-xs font-mono">
                   <span className="text-[#9E9C96] block uppercase mb-0.5">DIRECT EMAIL</span>
                   <a
-                    href="mailto:info.dmcreation@gmail.com"
+                    href="mailto:dmcreation121@gmail.com"
                     className="font-semibold text-[#151515] hover:text-[#B69A6A] transition-colors"
                   >
-                    info.dmcreation@gmail.com
+                    dmcreation121@gmail.com
                   </a>
                 </div>
               </div>
@@ -137,7 +137,7 @@ export default function Contact({ onOpenBooking }) {
 
                 {/* Direct Email */}
                 <a
-                  href="mailto:info.dmcreation@gmail.com?subject=Production%20Inquiry%20%E2%80%94%20DM%20Creation"
+                  href="mailto:dmcreation121@gmail.com?subject=Production%20Inquiry%20%E2%80%94%20DM%20Creation"
                   className="group p-5 bg-[#F6F4EF] hover:bg-[#151515] transition-all duration-300 border border-[#DEDCD6] flex flex-col justify-between"
                 >
                   <div className="flex items-center justify-between mb-4">
@@ -154,7 +154,7 @@ export default function Contact({ onOpenBooking }) {
                       Direct Email
                     </h4>
                     <p className="text-xs font-mono text-[#666666] group-hover:text-white/70 mt-1 truncate">
-                      info.dmcreation@gmail.com
+                      dmcreation121@gmail.com
                     </p>
                   </div>
                 </a>

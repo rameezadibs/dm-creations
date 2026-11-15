@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
 import BookingModal from './components/BookingModal';
+import WhatsAppButton from './components/WhatsAppButton';
 import { CursorProvider } from './context/CursorContext';
 
 import Home from './pages/Home';
@@ -51,6 +52,8 @@ export default function App() {
           </div>
 
           <Footer onOpenBooking={handleOpenBooking} />
+
+          <WhatsAppButton />
 
           <BookingModal
             isOpen={globalBookingOpen}

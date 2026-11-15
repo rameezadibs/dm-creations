@@ -64,8 +64,8 @@ export default function Footer({ onOpenBooking }) {
             <div className="space-y-3 text-xs font-mono">
               <div>
                 <span className="text-white/40 block text-[10px] uppercase">EMAIL</span>
-                <a href="mailto:info.dmcreation@gmail.com" className="text-white/80 hover:text-[#B69A6A] transition-colors">
-                  info.dmcreation@gmail.com
+                <a href="mailto:dmcreation121@gmail.com" className="text-white/80 hover:text-[#B69A6A] transition-colors">
+                  dmcreation121@gmail.com
                 </a>
               </div>
               <div>
