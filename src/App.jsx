@@ -12,6 +12,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -48,6 +49,7 @@ export default function App() {
               <Route path="/services" element={<Services onOpenBooking={handleOpenBooking} />} />
               <Route path="/portfolio" element={<Portfolio onOpenBooking={handleOpenBooking} />} />
               <Route path="/contact" element={<Contact onOpenBooking={handleOpenBooking} />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </div>
 

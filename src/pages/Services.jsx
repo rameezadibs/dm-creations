@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Camera,
@@ -15,6 +15,8 @@ import {
 } from 'lucide-react';
 import { useCursor } from '../context/CursorContext';
 import VideoModal from '../components/VideoModal';
+import SEO from '../components/SEO';
+import { SEO_DATA, SITE_URL } from '../config/seo';
 
 export default function Services({ onOpenBooking }) {
   const { setCursor, resetCursor } = useCursor();
@@ -27,201 +29,97 @@ export default function Services({ onOpenBooking }) {
     setVideoModalOpen(true);
   };
 
-  // Dynamic SEO Meta Tags & Head Management
-  useEffect(() => {
-    // Exact high-value SEO Page Title
-    document.title = "Visual Production Services Dubai | Photography, Videography & 360 Booth | DM Creation";
-
-    // Meta Description
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute(
-        'content',
-        "Explore DM Creation's full suite of luxury visual services in Dubai: editorial & commercial photography, 4K cinema videography, global multi-cam live streaming, and interactive 360° photo booth rentals across the UAE & worldwide."
-      );
-    }
-
-    // Canonical Link
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
-    }
-    canonical.setAttribute('href', 'https://dmcreation.ae/services');
-
-    // Open Graph Tags
-    const setOgTag = (property, content) => {
-      let tag = document.querySelector(`meta[property="${property}"]`);
-      if (!tag) {
-        tag = document.createElement('meta');
-        tag.setAttribute('property', property);
-        document.head.appendChild(tag);
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${SITE_URL}/services#breadcrumb`,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": `${SITE_URL}/`
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": `${SITE_URL}/services`
+          }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": `${SITE_URL}/services#photography`,
+        "name": "Editorial & Event Photography Dubai",
+        "serviceType": "Photography",
+        "description": "High-fidelity editorial portraiture, luxury galas, architectural coverage, and unscripted celebration moments with medium format sensors and natural skin-tone color grading.",
+        "provider": {
+          "@type": "ProfessionalService",
+          "name": "DM Creation",
+          "url": `${SITE_URL}/`
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Dubai" },
+          { "@type": "City", "name": "Abu Dhabi" },
+          { "@type": "Country", "name": "United Arab Emirates" },
+          { "@type": "Place", "name": "Worldwide" }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": `${SITE_URL}/services#videography`,
+        "name": "Cinematic Videography & Film Production Dubai",
+        "serviceType": "Videography",
+        "description": "Full cinematic motion picture production using anamorphic optics, 4K DCI, fluid gimbal tracking, licensed aerial drone cinematography, and tailored film-emulation color grading.",
+        "provider": {
+          "@type": "ProfessionalService",
+          "name": "DM Creation",
+          "url": `${SITE_URL}/`
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Dubai" },
+          { "@type": "City", "name": "Abu Dhabi" },
+          { "@type": "Country", "name": "United Arab Emirates" }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": `${SITE_URL}/services#livestreaming`,
+        "name": "4K Multi-Camera Live Streaming Services Dubai",
+        "serviceType": "Live Streaming & Broadcast",
+        "description": "Real-time global broadcasting for corporate conferences, summits, and hybrid galas with dual-bonded 5G/satellite redundancy and custom branded graphics.",
+        "provider": {
+          "@type": "ProfessionalService",
+          "name": "DM Creation",
+          "url": `${SITE_URL}/`
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Dubai" },
+          { "@type": "Country", "name": "United Arab Emirates" }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": `${SITE_URL}/services#360booth`,
+        "name": "Interactive 360° Photo & Video Booth Rental Dubai",
+        "serviceType": "Event Technology Activation",
+        "description": "Motorized orbital camera platform creating instant slow-motion cinematic video keepsakes with custom sound design, studio ring lighting, and instant AirDrop & QR code delivery.",
+        "provider": {
+          "@type": "ProfessionalService",
+          "name": "DM Creation",
+          "url": `${SITE_URL}/`
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Dubai" },
+          { "@type": "City", "name": "Abu Dhabi" },
+          { "@type": "Country", "name": "United Arab Emirates" }
+        ]
       }
-      tag.setAttribute('content', content);
-    };
-
-    setOgTag('og:title', 'Visual Production Services Dubai | Photography, Videography & 360 Booth | DM Creation');
-    setOgTag('og:description', 'Explore DM Creation’s full suite of luxury visual services in Dubai: editorial & commercial photography, 4K cinema videography, global multi-cam live streaming, and interactive 360° photo booth rentals across UAE.');
-    setOgTag('og:url', 'https://dmcreation.ae/services');
-    setOgTag('og:type', 'website');
-    setOgTag('og:image', 'https://dmcreation.ae/images/hero-cinematic.jpg');
-
-    // Inject Comprehensive JSON-LD Schemas (BreadcrumbList, Service Catalog, FAQPage)
-    const scriptId = 'services-structured-data';
-    let scriptTag = document.getElementById(scriptId);
-    if (!scriptTag) {
-      scriptTag = document.createElement('script');
-      scriptTag.id = scriptId;
-      scriptTag.type = 'application/ld+json';
-      document.head.appendChild(scriptTag);
-    }
-
-    const structuredData = {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "BreadcrumbList",
-          "@id": "https://dmcreation.ae/services#breadcrumb",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://dmcreation.ae/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Services",
-              "item": "https://dmcreation.ae/services"
-            }
-          ]
-        },
-        {
-          "@type": "Service",
-          "@id": "https://dmcreation.ae/services#photography",
-          "name": "Editorial & Event Photography Dubai",
-          "serviceType": "Photography",
-          "description": "High-fidelity editorial portraiture, luxury galas, architectural coverage, and unscripted celebration moments with medium format sensors and natural skin-tone color grading.",
-          "provider": {
-            "@type": "ProfessionalService",
-            "name": "DM Creation",
-            "url": "https://dmcreation.ae/"
-          },
-          "areaServed": [
-            { "@type": "City", "name": "Dubai" },
-            { "@type": "City", "name": "Abu Dhabi" },
-            { "@type": "Country", "name": "United Arab Emirates" },
-            { "@type": "Place", "name": "Worldwide" }
-          ]
-        },
-        {
-          "@type": "Service",
-          "@id": "https://dmcreation.ae/services#videography",
-          "name": "Cinematic Videography & Film Production Dubai",
-          "serviceType": "Videography",
-          "description": "Full cinematic motion picture production using anamorphic optics, 4K DCI, fluid gimbal tracking, licensed aerial drone cinematography, and tailored film-emulation color grading.",
-          "provider": {
-            "@type": "ProfessionalService",
-            "name": "DM Creation",
-            "url": "https://dmcreation.ae/"
-          },
-          "areaServed": [
-            { "@type": "City", "name": "Dubai" },
-            { "@type": "City", "name": "Abu Dhabi" },
-            { "@type": "Country", "name": "United Arab Emirates" }
-          ]
-        },
-        {
-          "@type": "Service",
-          "@id": "https://dmcreation.ae/services#livestreaming",
-          "name": "4K Multi-Camera Live Streaming Services Dubai",
-          "serviceType": "Live Streaming & Broadcast",
-          "description": "Real-time global broadcasting for corporate conferences, summits, and hybrid galas with dual-bonded 5G/satellite redundancy and custom branded graphics.",
-          "provider": {
-            "@type": "ProfessionalService",
-            "name": "DM Creation",
-            "url": "https://dmcreation.ae/"
-          },
-          "areaServed": [
-            { "@type": "City", "name": "Dubai" },
-            { "@type": "Country", "name": "United Arab Emirates" }
-          ]
-        },
-        {
-          "@type": "Service",
-          "@id": "https://dmcreation.ae/services#360booth",
-          "name": "Interactive 360° Photo & Video Booth Rental Dubai",
-          "serviceType": "Event Technology Activation",
-          "description": "Motorized orbital camera platform creating instant slow-motion cinematic video keepsakes with custom sound design, studio ring lighting, and instant AirDrop & QR code delivery.",
-          "provider": {
-            "@type": "ProfessionalService",
-            "name": "DM Creation",
-            "url": "https://dmcreation.ae/"
-          },
-          "areaServed": [
-            { "@type": "City", "name": "Dubai" },
-            { "@type": "City", "name": "Abu Dhabi" },
-            { "@type": "Country", "name": "United Arab Emirates" }
-          ]
-        },
-        {
-          "@type": "FAQPage",
-          "@id": "https://dmcreation.ae/services#faq",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Can we book multiple visual production services as a bundled package?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. Most clients commission DM Creation for integrated multi-discipline coverage—such as combined Editorial Photography and Cinematic Videography, or Full Event Broadcast paired with a 360° Booth experience. Bundling ensures a unified creative director and harmonized color palette across all deliverables."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What is the typical turnaround time for photography and cinematic films?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "For photography, a private curated preview gallery (20–40 highlight frames) is delivered within 24 to 48 hours for press and social media, with the complete archival suite delivered within 7 to 10 days. Cinematic highlight trailers are typically completed within 7 to 14 days following color grading and custom sound design."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Do you hold commercial drone flight permits in Dubai and the UAE?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. DM Creation manages all statutory Dubai Civil Aviation Authority (DCAA) and GCAA drone operation clearances, airspace permits, and site security approvals for aerial cinematography across Dubai and the UAE."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Are your production teams available for destination shoots outside the UAE?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "DM Creation regularly deploys worldwide for destination weddings, luxury corporate summits, and global brand campaigns across the GCC, Europe, and Asia. Our mobile production kits are configured for frictionless international transport."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What technical redundancy do you maintain during live streaming?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Our live streaming broadcast systems utilize dual bonded cellular network encoders (multiple independent 5G/4G networks combined with hardwired gigabit LAN) alongside secondary hardware failover units, guaranteeing 99.99% uptime with sub-second transmission latency."
-              }
-            }
-          ]
-        }
-      ]
-    };
-
-    scriptTag.textContent = JSON.stringify(structuredData);
-
-    return () => {
-      const el = document.getElementById(scriptId);
-      if (el) el.remove();
-    };
-  }, []);
+    ]
+  };
 
   const servicesList = [
     {
@@ -360,6 +258,14 @@ export default function Services({ onOpenBooking }) {
 
   return (
     <div className="pt-28 pb-24 bg-[#F6F4EF] min-h-screen text-[#151515]">
+      <SEO
+        title={SEO_DATA.services.title}
+        description={SEO_DATA.services.description}
+        canonical={SEO_DATA.services.canonical}
+        keywords={SEO_DATA.services.keywords}
+        ogImage={SEO_DATA.services.ogImage}
+        schema={structuredData}
+      />
       {/* Semantic Breadcrumbs for Navigation & SEO */}
       <nav aria-label="Breadcrumb" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-6">
         <ol className="flex items-center space-x-2 text-xs font-mono tracking-wider text-[#666666]">

@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import SEO from '../components/SEO';
+import { SEO_DATA, SITE_URL } from '../config/seo';
 import Hero from '../components/Hero';
 import VisualStatement from '../components/VisualStatement';
 import ServicesPreview from '../components/ServicesPreview';
@@ -36,6 +38,13 @@ export default function Home() {
 
   return (
     <main className="relative bg-[#F3EFEA]">
+      <SEO
+        title={SEO_DATA.home.title}
+        description={SEO_DATA.home.description}
+        canonical={SEO_DATA.home.canonical}
+        keywords={SEO_DATA.home.keywords}
+        ogImage={SEO_DATA.home.ogImage}
+      />
       {/* 01 — Hero Section */}
       <Hero
         onOpenBooking={() => handleOpenBooking('General Inquiry')}

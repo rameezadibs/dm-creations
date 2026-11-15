@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import {
@@ -8,21 +8,11 @@ import {
   MoveRight,
 } from 'lucide-react';
 import { useCursor } from '../context/CursorContext';
+import SEO from '../components/SEO';
+import { SEO_DATA, SITE_URL } from '../config/seo';
 
 export default function About({ onOpenBooking }) {
   const { setCursor, resetCursor } = useCursor();
-
-  // Dynamic SEO Page Title & Meta Description Boost
-  useEffect(() => {
-    document.title = "About DM Creation | Premier Photography, Videography & Visual Production Studio Dubai";
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute(
-        'content',
-        "Discover DM Creation: Dubai's premier visual production studio specializing in high-fashion editorial photography, cinematic videography, 4K multi-cam live streaming, and interactive 360 photo booth rentals across UAE and worldwide."
-      );
-    }
-  }, []);
 
   // Scroll tracking for parallax effects
   const containerRef = useRef(null);
@@ -109,6 +99,13 @@ export default function About({ onOpenBooking }) {
 
   return (
     <div ref={containerRef} className="bg-[#F6F4EF] text-[#151515] overflow-x-hidden selection:bg-[#151515] selection:text-[#F6F4EF]">
+      <SEO
+        title={SEO_DATA.about.title}
+        description={SEO_DATA.about.description}
+        canonical={SEO_DATA.about.canonical}
+        keywords={SEO_DATA.about.keywords}
+        ogImage={SEO_DATA.about.ogImage}
+      />
       {/* Schema.org Structured Data (JSON-LD) for Search Engines & Google Rich Results */}
       <script
         type="application/ld+json"
@@ -116,29 +113,32 @@ export default function About({ onOpenBooking }) {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'AboutPage',
-            '@id': 'https://dmcreation.ae/about#webpage',
-            url: 'https://dmcreation.ae/about',
-            name: 'About DM Creation | Premier Photography, Videography & Visual Production Studio Dubai',
-            description: "Learn about DM Creation: Dubai's premier visual production studio specializing in high-fashion editorial photography, cinematic videography, 4K multi-camera live streaming, and interactive 360 photo booth rentals across UAE and worldwide.",
+            '@id': `${SITE_URL}/about#webpage`,
+            url: `${SITE_URL}/about`,
+            name: SEO_DATA.about.title,
+            description: SEO_DATA.about.description,
             mainEntity: {
               '@type': ['ProfessionalService', 'Organization'],
-              '@id': 'https://dmcreation.ae/#organization',
+              '@id': `${SITE_URL}/#organization`,
               name: 'DM Creation',
               alternateName: 'DM Creation Visual Production Studio Dubai',
-              url: 'https://dmcreation.ae/',
-              logo: 'https://dmcreation.ae/dm-logo-black.png',
-              image: 'https://dmcreation.ae/about/hero.png',
+              url: `${SITE_URL}/`,
+              logo: `${SITE_URL}/dm-logo-black.png`,
+              image: `${SITE_URL}/home/hero.PNG`,
+              telephone: '+971528351320',
+              email: 'dmcreation121@gmail.com',
               priceRange: '$$$$',
               address: {
                 '@type': 'PostalAddress',
+                streetAddress: 'Business Bay',
                 addressLocality: 'Dubai',
                 addressRegion: 'Dubai',
                 addressCountry: 'AE',
               },
               geo: {
                 '@type': 'GeoCoordinates',
-                latitude: '25.2048',
-                longitude: '55.2708',
+                latitude: '25.1856',
+                longitude: '55.2750',
               },
               foundingDate: '2014',
               foundingLocation: {
@@ -156,28 +156,6 @@ export default function About({ onOpenBooking }) {
                 'Corporate Summit & Gala Coverage',
                 'Color Grading & Digital Cinematography',
               ],
-              hasPart: [
-                {
-                  '@type': 'WebPageElement',
-                  '@id': 'https://dmcreation.ae/about#story-section',
-                  name: 'Our Story // Frame 02 — Studio Heritage & Evolution',
-                  description: "The journey of DM Creation from analog stills to premier Dubai 4K cinema production, live broadcast streaming, and 360 photo booth experiences.",
-                },
-                {
-                  '@type': 'WebPageElement',
-                  '@id': 'https://dmcreation.ae/about#cta-section',
-                  name: 'Book DM Creation — Production Inquiries & Visual Commissions',
-                  description: 'Reserve premier Dubai event photography, 4K commercial cinematography, live streaming broadcasts, and interactive 360 photo booth rentals across UAE and worldwide.',
-                  potentialAction: {
-                    '@type': 'ReserveAction',
-                    target: 'https://dmcreation.ae/about#cta-section',
-                    result: {
-                      '@type': 'Reservation',
-                      name: 'DM Creation Visual Production Booking',
-                    },
-                  },
-                },
-              ],
               areaServed: [
                 { '@type': 'City', name: 'Dubai' },
                 { '@type': 'City', name: 'Abu Dhabi' },
@@ -192,6 +170,7 @@ export default function About({ onOpenBooking }) {
                     '@type': 'Offer',
                     itemOffered: {
                       '@type': 'Service',
+                      '@id': `${SITE_URL}/services#photography`,
                       name: 'Editorial & Event Photography Dubai',
                       description: 'Luxury high-fashion portraiture, corporate summit coverage, commercial campaigns, and candid wedding photography.',
                     },
@@ -200,6 +179,7 @@ export default function About({ onOpenBooking }) {
                     '@type': 'Offer',
                     itemOffered: {
                       '@type': 'Service',
+                      '@id': `${SITE_URL}/services#videography`,
                       name: 'Cinematic Videography & Film Production',
                       description: '4K ProRes cinema cameras, brand commercials, showreels, and documentary-style event films.',
                     },
@@ -208,6 +188,7 @@ export default function About({ onOpenBooking }) {
                     '@type': 'Offer',
                     itemOffered: {
                       '@type': 'Service',
+                      '@id': `${SITE_URL}/services#livestreaming`,
                       name: '4K Live Streaming & Multi-Camera Broadcast',
                       description: 'Low-latency broadcast flypacks for global summits, luxury hybrid galas, and live stage events.',
                     },
@@ -216,6 +197,7 @@ export default function About({ onOpenBooking }) {
                     '@type': 'Offer',
                     itemOffered: {
                       '@type': 'Service',
+                      '@id': `${SITE_URL}/services#360booth`,
                       name: 'Interactive 360° Photo Booth Experience',
                       description: 'Branded 360 video spinner booth with dynamic slow-motion video, studio LED lighting, and instant AirDrop sharing.',
                     },
@@ -230,13 +212,13 @@ export default function About({ onOpenBooking }) {
                   '@type': 'ListItem',
                   position: 1,
                   name: 'Home',
-                  item: 'https://dmcreation.ae/',
+                  item: `${SITE_URL}/`,
                 },
                 {
                   '@type': 'ListItem',
                   position: 2,
                   name: 'About Us',
-                  item: 'https://dmcreation.ae/about',
+                  item: `${SITE_URL}/about`,
                 },
               ],
             },

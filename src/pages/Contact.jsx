@@ -1,9 +1,60 @@
 import React from 'react';
 import { ArrowUpRight, Mail, Phone, MapPin, Clock, MessageSquare, Calendar, ShieldCheck, Globe2 } from 'lucide-react';
+import SEO from '../components/SEO';
+import { SEO_DATA, SITE_URL } from '../config/seo';
 
 export default function Contact({ onOpenBooking }) {
+  const contactSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    '@id': `${SITE_URL}/contact#webpage`,
+    url: `${SITE_URL}/contact`,
+    name: SEO_DATA.contact.title,
+    description: SEO_DATA.contact.description,
+    mainEntity: {
+      '@type': ['ProfessionalService', 'Organization'],
+      '@id': `${SITE_URL}/#organization`,
+      name: 'DM Creation',
+      telephone: '+971528351320',
+      email: 'dmcreation121@gmail.com',
+      url: `${SITE_URL}/`,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Business Bay',
+        addressLocality: 'Dubai',
+        addressRegion: 'Dubai',
+        addressCountry: 'AE',
+      },
+    },
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: `${SITE_URL}/`,
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Contact',
+          item: `${SITE_URL}/contact`,
+        },
+      ],
+    },
+  };
+
   return (
     <div className="pt-32 pb-24 bg-[#F6F4EF] min-h-screen">
+      <SEO
+        title={SEO_DATA.contact.title}
+        description={SEO_DATA.contact.description}
+        canonical={SEO_DATA.contact.canonical}
+        keywords={SEO_DATA.contact.keywords}
+        ogImage={SEO_DATA.contact.ogImage}
+        schema={contactSchema}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-3xl mb-16 pb-8 border-b border-[#DEDCD6]">

@@ -1,0 +1,23 @@
+{
+  "name": "DM Creation",
+  "short_name": "DM Creation",
+  "description": "Professional photography, videography, live streaming and 360° photo booth experiences in Dubai and UAE.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F6F4EF",
+  "theme_color": "#111111",
+  "icons": [
+    {
+      "src": "/dm-logo-black.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/dm-logo-black.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

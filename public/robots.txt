@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dmcreation.ae/sitemap.xml
+Sitemap: https://dmcreationstudio.com/sitemap.xml
